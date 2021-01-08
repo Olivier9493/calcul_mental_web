@@ -8875,8 +8875,8 @@ a1z:function a1z(){}},F={xq:function xq(a){this.a=a},kj:function kj(a,b){this.c=
 this.a=b},Es:function Es(a,b,c,d){var _=this
 _.d=1
 _.e=null
-_.f=0
-_.z=_.y=_.x=_.r=null
+_.x=_.r=_.f=0
+_.z=_.y=null
 _.ch=_.Q=" "
 _.cx=a
 _.db=!0
@@ -20522,7 +20522,6 @@ VQ:function(a,b){if(!$.a70){$.a70=!0
 window
 if(typeof console!="undefined")window.console.warn("The performance overlay isn't supported on the web")}},
 VR:function(a,b,c,d){var s,r
-c
 t.l9.a(b)
 s=b.a.b
 r=new H.es(null)
@@ -31062,18 +31061,20 @@ P.Hj.prototype={}
 P.Hk.prototype={}
 X.K9.prototype={
 Hs:function(a,b){return C.d.dK(C.pF.ZY()*(b-a+1)+a)},
-Ht:function(){var s,r=this
-r.y=r.Hs(r.a,r.b)
-r.z=r.Hs(r.c,r.d)
-switch(r.e){case"Addition":s="+"
+Ht:function(){var s,r,q=this
+q.y=q.Hs(q.a,q.b)
+q.z=q.Hs(q.c,q.d)
+switch(q.e){case"Addition":s="+"
 break
 case"Soustraction":s="-"
 break
 case"Multiplication":s="x"
 break
 case"Division":s=H.aB(247)
+r=q.z
+if(r===0)q.z=r+1
 break
-default:s=null}return H.b(r.y)+" "+H.b(s)+" "+H.b(r.z)+" ="},
+default:s=null}return H.b(q.y)+" "+H.b(s)+" "+H.b(q.z)+" ="},
 a0k:function(a,b,c){var s,r,q,p,o,n=this,m=null,l=n.r
 l.aJ(0)
 s=n.e
@@ -31100,8 +31101,8 @@ l.m(0,"givenResult",c)
 l.m(0,"calcResult",r)
 p=t.z
 n.x.m(0,a,P.zq(l,p,p))
-if(s!=="Division")return c==r
-else return c==r&&b==q},
+if(s!=="Division")return c===r
+else return c===r&&b===q},
 IG:function(a){return a[C.pF.a__(5)]},
 z8:function(a){return this.IG(a,t.z)}}
 V.lX.prototype={
@@ -60214,3 +60215,4 @@ a(b.target)}for(var r=0;r<s.length;++r)s[r].addEventListener("load",onLoad,false
 var s=F.a1N
 if(typeof dartMainRunner==="function")dartMainRunner(s,[])
 else s([])})})()
+//# sourceMappingURL=main.dart.js.map
